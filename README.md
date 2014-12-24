@@ -15,7 +15,7 @@ The service must expose the following endpoints:
 
 
 
-```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }``` with the app to be ran.
+```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }``` with the web app that exposes ```/ping``` endpoint on port 8080 
 
 ```GET``` lists all deployed containers in the following format:
 
@@ -50,6 +50,9 @@ The service must expose the following endpoints:
 ]
 ```
 
+### /app/{containerId}
+```GET``` forwards request to the web application deployed under ```{containerId}```. That said, ```/app/{containerId}/ping``` must delegate to ```/ping``` mapped under port ```8080```.
+
 
 # Requirements
 
@@ -62,6 +65,6 @@ The service must expose the following endpoints:
  
 # Winner election
 
-???
+Winners will be selected randomly from the pool of solutions implemented correctly.
 
 ### Good luck!

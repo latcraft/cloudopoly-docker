@@ -9,37 +9,37 @@ Problem definition
 ==================
 Create deployment service for Docker containers on top of AWS infrastructure. 
 
-Service must expose the following endpoints:
+The service must expose the following endpoints:
 
-### /api/apps
-
-
-```POST``` spins up new app instance in a region with fewest deployed app instances. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }``` with the app to be ran.
+### /containers
 
 
-```GET``` lists all deployed app in the following format:
+
+```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }``` with the app to be ran.
+
+```GET``` lists all deployed containers in the following format:
 
 ```
 [
-	{ "id": "<appId>", "region": "<region>"  },
-	{ "id": "<appId>", "region": "<region>"  }
+	{ "id": "<containerId>", "region": "<region>"  },
+	{ "id": "<containerId>", "region": "<region>"  }
 	...
 ]
 ```
-... where ```<appId>``` uniquely identifies app instance and ```<region>``` is, well, region.
+... where ```<containerId>``` uniquely identifies container and ```<region>``` is, well, region.
 
-### /api/apps?region=&lt;region&gt;
+### /containers?region=&lt;region&gt;
 
-```POST``` spins up new app instance in a given ```<region>```.
+```POST``` spins up new container in a given ```<region>```.
 
-```GET``` lists deployed app in a given ```<region>```.
+```GET``` lists deployed containers in a given ```<region>```.
 
 
-### /api/apps/{appId}
+### /containers/{containerId}
 
-```DELETE``` undeploys app instance by ```<appId>```
+```DELETE``` undeploys container instance by ```<containerId>```
 
-### /api/regions
+### /regions
 ```GET``` lists all regions available for deployment in the following format:
 
 ```

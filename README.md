@@ -37,7 +37,7 @@ The service must expose the following endpoints:
 
 ### /containers/{containerId}
 
-```DELETE``` undeploys container instance by ```<containerId>```
+```DELETE``` undeploys container by ```<containerId>```
 
 ### /regions
 ```GET``` lists all regions available for deployment in the following format:

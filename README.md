@@ -59,8 +59,8 @@ The service must expose the following endpoints:
 - Any programming language, any operating system
 - Deploy your service to *AWS* *EC2* 
 - Use whatever instances you want
-- Send IP address of your service before `02.02.2015 18:00` to contest@latcraft.lv
-- On `02.02.2015 20:00` we start the test! 
+- Send IP address of your service before `02.03.2015 18:00` to contest@latcraft.lv
+- On `02.03.2015 20:00` we start the test! 
 - Keep EC2 instances running in at least 2 regions during testing time
  
 # Winner election

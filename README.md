@@ -15,7 +15,7 @@ The service must expose the following endpoints:
 
 
 
-```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }``` with the web app that exposes ```/ping``` endpoint on port 8080 
+```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }```. Image, when ran, starts web app that exposes ```/ping``` endpoint on port 8080 
 
 ```GET``` lists all deployed containers in the following format:
 
@@ -26,7 +26,7 @@ The service must expose the following endpoints:
 	...
 ]
 ```
-... where ```<containerId>``` uniquely identifies container and ```<region>``` is, well, region.
+... where ```<containerId>``` uniquely identifies container and ```<region>``` is, well, region (e.g. ```us-east-1```).
 
 ### /containers?region=&lt;region&gt;
 

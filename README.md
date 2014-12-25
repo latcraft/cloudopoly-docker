@@ -7,15 +7,14 @@ Information about the first challenge can be found [here](https://github.com/lat
 
 Problem definition
 ==================
+
 Create deployment service for Docker containers on top of AWS infrastructure. 
 
 The service must expose the following endpoints:
 
 ### /containers
 
-
-
-```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }```. Image, when ran, starts web app that exposes ```/ping``` endpoint on port 8080 
+```POST``` spins up new container in a region with fewest deployed containers. JSON body contains publicly accessible Docker image id  ``` { "imageId": "<imageId>" }```. Image, when ran, starts web app that exposes ```/ping``` endpoint on port 8080.
 
 ```GET``` lists all deployed containers in the following format:
 
@@ -40,6 +39,7 @@ The service must expose the following endpoints:
 ```DELETE``` undeploys container by ```<containerId>```
 
 ### /regions
+
 ```GET``` lists all regions available for deployment in the following format:
 
 ```
@@ -51,6 +51,7 @@ The service must expose the following endpoints:
 ```
 
 ### /app/{containerId}
+
 ```GET``` forwards request to the web application deployed under ```{containerId}```. That said, ```/app/{containerId}/ping``` must delegate to ```/ping``` mapped under port ```8080```.
 
 

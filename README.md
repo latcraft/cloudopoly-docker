@@ -66,6 +66,6 @@ The service must expose the following endpoints:
  
 # Winner election
 
-Winners will be selected randomly from the pool of attendees who implemented solution correctly.
+Winners will be selected based on solution correctness and robustness.
 
 ### Good luck!
